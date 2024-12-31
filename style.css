@@ -4,13 +4,17 @@
 
 /* Estilos gerais */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Fonte geral */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Contêiner principal */
 .container {
-    display: flex;
-    flex-direction: column;
+    max-width: 1200px; /* Largura máxima para desktop */
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* Menu lateral */
@@ -22,6 +26,7 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Navegação */
 .menu {
     list-style-type: none;
     padding: 0;
@@ -35,6 +40,7 @@ body {
     text-decoration: none;
     color: #333;
     font-weight: bold;
+    font-size: 18px; /* Tamanho da fonte do menu */
 }
 
 /* Sessões */
@@ -42,49 +48,67 @@ body {
     padding: 20px;
 }
 
+/* Cabeçalhos */
+h1 {
+    font-size: 36px; /* Tamanho da fonte do título principal */
+}
+
+h2 {
+    font-size: 24px; /* Tamanho da fonte dos subtítulos */
+}
+
+h3 {
+    font-size: 20px; /* Tamanho da fonte dos headers menores */
+}
+
 /* Estilos para telas menores */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column;
+        padding: 10px;
     }
 
+    .menu-link {
+        font-size: 16px; /* Ajuste do tamanho da fonte do menu para dispositivos móveis */
+    }
+
+    h1 {
+        font-size: 28px; /* Ajuste do tamanho da fonte do título principal para dispositivos móveis */
+    }
+
+    h2 {
+        font-size: 22px; /* Ajuste do tamanho da fonte dos subtítulos para dispositivos móveis */
+    }
+
+    h3 {
+        font-size: 18px; /* Ajuste do tamanho da fonte dos headers menores para dispositivos móveis */
+    }
+
+    /* Ajuste dos contêineres */
     .sidebar {
         flex-direction: row;
         justify-content: space-around;
     }
 
-    .menu {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 100%;
+    .sessao-conhecimentos, .sessao-projetos, .sessao-contato, .sessao-orcamento {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-link {
+        font-size: 14px; /* Ajuste do tamanho da fonte do menu para telas muito pequenas */
     }
 
-    .menu-item {
-        margin: 0;
+    h1 {
+        font-size: 24px; /* Ajuste do tamanho da fonte do título principal para telas muito pequenas */
     }
 
-    .sessao-header {
-        text-align: center;
+    h2 {
+        font-size: 20px; /* Ajuste do tamanho da fonte dos subtítulos para telas muito pequenas */
     }
 
-    .conhecimentos, .projetos {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-
-    .input-group {
-        width: 100%;
-    }
-
-    .btn {
-        width: 100%;
+    h3 {
+        font-size: 16px; /* Ajuste do tamanho da fonte dos headers menores para telas muito pequenas */
     }
 }
 
